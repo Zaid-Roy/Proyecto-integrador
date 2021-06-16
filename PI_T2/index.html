@@ -27,12 +27,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Flexor - v4.3.0
-  * Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -196,13 +190,13 @@
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
           <div class="col-xl-8 col-lg-12 mt-4">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="form-contacto">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Tu nombre" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="tu correo" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Tu correo" required>
                 </div>
               </div>
               <div class="form-group mt-3">
@@ -214,9 +208,9 @@
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Tu mensaje ah sido enviado. Gracias!</div>
+                <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias!</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+              <div class="text-center"><button type="button" onclick="mandarMail()">Enviar Mensaje</button></div>
             </form>
           </div>
 
@@ -231,6 +225,30 @@
   <!--<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
 
   <!-- Vendor JS Files -->
+   <script>
+    const axios = require("axios");
+    const API_KEY = "a26b784ea5247a15ce3a801208b4a0cbd83595bf3925af678b6656bc6bbc5db9"; 
+    async function createInbox() {
+  // call MailSlurp createInbox endpoint
+  return await axios
+    .post(`https://api.mailslurp.com/createInbox?apiKey=${API_KEY}`)
+    .then((res) => res.data);
+}
+    await axios({
+    method: "POST",
+    url: `https://api.mailslurp.com/sendEmail?apiKey=${API_KEY}`,
+    data: {
+      senderId: 	"19836384-c440-46a8-8c4f-0ffd5513f2f1",
+      to: "88ff524d-4545-4a99-b684-3eb658aeb0c1@mailslurp.xyz",
+      subject: "Mensaje de prueba",
+      body: "Saludos de parte de Roy",
+  },
+});
+
+
+
+
+   </script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
