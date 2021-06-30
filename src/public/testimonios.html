@@ -63,6 +63,27 @@
   </header><!-- End Header -->
 
   <main id="main">
+    <style>
+.btn-agregar{
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 30px 8px 30px;
+  color: #000;
+  border-radius: 50px;
+  transition: all ease-in-out 0.4s;
+}
+
+
+.btn-agregar i {
+  font-size: 14px;
+}
+
+.btn-agregar:hover {
+  color: rgb(25, 133, 118);
+  background-color: rgb(0, 255, 221);
+  background: #fff;
+}
+    </style>
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
@@ -92,8 +113,8 @@ Esta es una excelente página
       </textarea>
       
             </div>
-            
-            <div class="text-center"><input class="btn-primary" type="button" onclick="agregar()" value="Agregar"></div>
+            <!--cambiar la funcion a limpiar para eliminar el local.--></cambiar>
+            <div class="text-center"><input class="btn-agregar" type="button" onclick="agregar()" value="Agregar"></div>
           </form>
         </div>
 

@@ -13,6 +13,7 @@
   itemsContainer.innerHTML += itemHTML;
   
 } */
+var comments=[];
 function addItem(item){
   //Comandos de inicialización del carrusel
   $('#testimonio')
@@ -44,7 +45,9 @@ function agregar(){
   'company':com,
   'testimony':tes};
   addItem(item);
-  
+  comments.push(item);
+  const testimonyJson = JSON.stringify(comments);
+  window.localStorage.setItem('testimony', testimonyJson);  
 }
 
 function fetchTestimony() {
@@ -52,28 +55,34 @@ function fetchTestimony() {
       .then((response) => response.json()) // transforms data into json
       .then(response => {
           for (let i = 0; i < response.testimonios.length; i++) {
+            comments.push(response.testimonios[i]);
             addItem(response.testimonios[i]);
           }
-
-/*              const testimonyJson = JSON.stringify(response.data);
-          localStorage.setItem('testimony', testimonyJson);  */
+           const testimonyJson = JSON.stringify(comments);
+          window.localStorage.setItem('testimony', testimonyJson); 
+              
       })
 }
+function loadColorsFromStorage() {
+  
+  if (window.localStorage.getItem('testimony')) {
+      const colorsJson = localStorage.getItem('testimony');
+      const colors = JSON.parse(colorsJson);
+      for (let i = 0; i < colors.length; i++) {
+        addItem(colors[i]);
+        comments.push(colors[i]);
+      }
+      
+   const testimonyJson = JSON.stringify(comments);
+  window.localStorage.setItem('testimony', testimonyJson);   
+  }else{
+    fetchTestimony();
+  }
+}
+function limpiar(){
+  window.localStorage.clear();
+}
+  loadColorsFromStorage();
 
-fetchTestimony();
-/* var payload = {'name':"Rogelio",
-'company':" ",
-'testimony':"Esta es una prueba de Json"
-};
 
-var data = new FormData();
-data.append( "json", JSON.stringify( payload ) );
 
-fetch("assets/js/objetos.json",
-{
-  method: "POST",
-  body: data
-})
-.then(function(res){ return res.json(); })
-.then(function(data){ alert( JSON.stringify( data ) ) })
-fetchTestimony(); */
