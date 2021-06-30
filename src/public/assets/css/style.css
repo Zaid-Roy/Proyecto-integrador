@@ -1040,7 +1040,25 @@ section {
 .testimonials .owl-dot.active {
   background-color: rgb(0, 255, 221) !important;
 }
+.testimonials .btn-comment{
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 30px 8px 30px;
+  color: #fff;
+  border-radius: 50px;
+  transition: all ease-in-out 0.4s;
+}
 
+
+.testimonials  .btn-comment i {
+  font-size: 14px;
+}
+
+.testimonials  .btn-comment:hover {
+  color: rgb(25, 133, 118);
+  background-color: rgb(0, 255, 221);
+  background: #fff;
+}
 @media (min-width: 1024px) {
   .testimonials {
     background-attachment: fixed;
