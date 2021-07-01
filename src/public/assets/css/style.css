@@ -882,7 +882,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Values
+--------------------------------------------------------------
+# VISION MISION VALORES!!!!
+--------------------------------------------------------------
 --------------------------------------------------------------*/
 .values .card {
   border: 0;
@@ -892,17 +894,17 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: rgb(25, 133, 118);
 }
 
 .values .card-body {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
+  
   padding: 15px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   transition: ease-in-out 0.4s;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .values .card-title {
@@ -911,12 +913,13 @@ section {
   margin-bottom: 15px;
 }
 
-.values .card-title a {
-  color: #473d3a;
+.values .card-title  {
+  color: rgb(25, 133, 118);
 }
 
 .values .card-text {
-  color: #4b4949;
+  text-align: justify;
+  color:rgb(25, 133, 118);
 }
 
 .values .read-more a {
@@ -1654,7 +1657,7 @@ MOREINFORMACION---------------------------------------------------*/
 
 .contact .info-box i {
   font-size: 32px;
-  color:lightblue;
+  color:rgb(25, 133, 118);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted ;
@@ -1741,16 +1744,16 @@ MOREINFORMACION---------------------------------------------------*/
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background:rgb(111, 172, 252);
-  border: 0;
+.contact button{
+  background:rgb(254, 255, 255);
+  border:1px solid rgba(165, 165, 165, 0.671);
   padding: 10px 24px;
-  color:rgba(0, 0, 0, 0.836);
+  color:rgb(131, 131, 131);
   transition: 0.4s;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background:rgba(148, 214, 255, 0.568); /*al poner el mouse pone un tono mas claro*/
+.contact button:hover {
+  background:rgb(25, 133, 118); /*al poner el mouse pone un tono mas claro*/
 }
 
 @-webkit-keyframes animate-loading {
