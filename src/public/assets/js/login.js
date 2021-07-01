@@ -31,9 +31,38 @@ function validateEmail(email) {
 document.getElementById("login-submit").onclick = function(e){
   e.preventDefault();
   let username= document.getElementById("username-login").value;
-  if(username !== ""){
-    alert(username);}
-  
+  let password = document.getElementById("password-login").value;
+  let title=""
+  let error="";
+  let success="";
+  if(username, password == ""){
+    title = "Empty fields";
+    success="";
+    if(username==""){
+      error += '<p>Username field is empty</p>';
+    }
+    if(password==""){
+      error += '<p>Password field is empty</p>';
+    }
+  }else{
+    if(username == "cege01" && password == "lalo"){
+      title = "WELCOME BACK "+ username+"!!!";
+      error="";
+      success = "Successfully logged in, thanks for being our client!";
+    }else{
+      title = "Not valid User Name or Password";
+      error += '<p>Wrong Password or User Name</p>';
+    }
+  }
+
+  $("#exampleModal").modal();
+  $("#exampleModalLabel").empty();
+  $("#modalSuccess").empty();
+  $("#modalError").empty();
+  $("#exampleModalLabel").append(title);
+  $("#modalError").append(error);
+  $("#modalSuccess").append(success);
+  $("#exampleModal").modal();
 }
 
 document.getElementById("register-submit").onclick = function(e){
@@ -46,6 +75,7 @@ document.getElementById("register-submit").onclick = function(e){
   let form = document.getElementById("register-form");
   let title=""
   let error="";
+  let success="";
   
   
   if(username , phone, email, password, confirmPass == ""){
@@ -93,3 +123,4 @@ document.getElementById("register-submit").onclick = function(e){
     return false;
   }
 }
+
