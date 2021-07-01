@@ -1746,9 +1746,9 @@ MOREINFORMACION---------------------------------------------------*/
 
 .contact button{
   background:rgb(254, 255, 255);
-  border:1px solid rgba(165, 165, 165, 0.671);
+  border:1px solid rgb(25, 133, 118);
   padding: 10px 24px;
-  color:rgb(131, 131, 131);
+  color:rgb(25, 133, 118);
   transition: 0.4s;
 }
 
