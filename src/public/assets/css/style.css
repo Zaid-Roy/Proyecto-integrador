@@ -1,13 +1,4 @@
-/**
-* Template Name: Flexor - v2.4.1
-* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #313030;
@@ -287,9 +278,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav {
   position: fixed;
   top: 55px;
-  right: 15px;
+  right:15px;
   bottom: 15px;
-  left: 15px;
+  left:50%;
   z-index: 9999;
   overflow-y: auto;
   background: #fff;
@@ -310,8 +301,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #473d3a;
-  padding: 10px 20px;
-  font-weight: 500;
+  padding: 10px 50px;
+  font-weight: 600;
   outline: none;
 }
 
@@ -1328,6 +1319,9 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
 .pricing .box {
   padding: 20px;
   background: #fff;
@@ -1336,6 +1330,10 @@ section {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+}
+
+.pricing .featured .bg{
+  background-color: rgb(25, 133, 118);
 }
 
 .pricing h3 {
@@ -1350,7 +1348,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #ff5821;
+  color: rgb(25, 133, 118);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1382,7 +1380,7 @@ section {
 }
 
 .pricing ul i {
-  color: #ff5821;
+  color: rgb(25, 133, 118);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1400,28 +1398,30 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #ff5821;
+  background: rgb(25, 133, 118);
   display: inline-block;
   padding: 6px 35px 8px 35px;
-  border-radius: 4px;
+  border-radius: 18px;
+  border: 1px solid rgb(25, 133, 118);
   color: #fff;
   transition: none;
   font-size: 14px;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  box-shadow: 0 3px 7px rgba(255, 88, 33, 0.4);
+  box-shadow: 0 3px 7px rgba(58, 221, 194, 0.4);
   transition: 0.3s;
 }
 
 .pricing .btn-buy:hover {
-  background: #ff7e54;
+  background: #fff;
+  color: rgb(25, 133, 118);
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #ff5821;
-  box-shadow: 0 3px 7px rgba(255, 88, 33, 0.4);
+  background: rgb(25, 133, 118);
+  box-shadow: 0 3px 7px rgba(58, 221, 194, 0.4);
 }
 
 .pricing .advanced {
@@ -1433,7 +1433,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #ff5821;
+  background: rgb(25, 133, 118);
   color: #fff;
 }
 
@@ -1516,7 +1516,132 @@ section {
     padding: 0;
   }
 }
+/*--------------------------------------------------------------
+# F.A.Q
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0 100px;
+}
 
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li + li {
+  margin-top: 15px;
+}
+
+.faq .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+}
+
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #ffb8a1;
+}
+
+.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: #343a40;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #ff5821;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+
+/*-----------------------------------------------------
+MOREINFORMACION---------------------------------------------------*/
+
+.more .content ul {
+  list-style: none;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.more .content ul li {
+  padding-bottom: 10px;
+}
+
+.more.content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #28a745;
+}
+.more .btn-buy {
+  background: rgb(25, 133, 118);
+  padding: 15px 80px 15px 80px;
+  border-radius: 40px;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  font-family:"Poppins", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 3px 7px rgba(58, 221, 194, 0.4);
+  transition: 0.3s;
+}
+
+.more .btn-buy:hover {
+  font-weight: 900;
+  border: 1px solid rgb(25, 133, 118);
+  background: #fff;
+  color: rgb(25, 133, 118);
+}
+.more h3{
+  font-size: 36px;
+  color: rgb(25, 133, 118);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+.more p{
+  font-family: "Poppins", sans-serif;
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
