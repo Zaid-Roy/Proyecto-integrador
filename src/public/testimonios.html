@@ -95,26 +95,29 @@
       <div class="container">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
         <div class="col-xl-9 col-lg-12 mt-4">
-          <form class="añadir">
+          <form action="/add-comment" method="POST">
             <div class="row">
               <div class="col-md-6 form-group">
-                <label for="name">Nombre: </label>
-                <input class="form-control" type="text" id="name" name="name" value="Roy" required>
+                <label for="name">Name: </label>
+                <input class="form-control" type="text" id="name" name="name" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="company">Compañia:</label>
-      <input class="form-control" type="text" id="company" name="company" value="Generation">
+                <label for="company">Company:</label>
+      <input class="form-control" type="text" id="company" name="company" >
               </div>
             </div>
             <div class="form-group mt-3">
-              <label for="testimonio">Testimonio:</label>
-      <textarea class="form-control" id="testimonio" name="testimonio" rows="4" cols="50">
-Esta es una excelente página
-      </textarea>
+              <label for="testimonio">Testimonials:</label>
+      <textarea class="form-control" id="testimony" name="testimony" rows="4" cols="50"></textarea>
       
             </div>
-            <!--cambiar la funcion a limpiar para eliminar el local.--></cambiar>
-            <div class="text-center"><input class="btn-agregar" type="button" onclick="agregar()" value="Agregar"></div>
+
+            <div class="text-center">
+              <button class="btn-agregar">
+              Add testimony
+          </button>
+        </div>
+            
           </form>
         </div>
 
