@@ -40,11 +40,14 @@ label {
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a:hover{
-	color: rgb(25, 133, 118);
+	color: rgb(100, 200, 200);
 }
 .panel-login>.panel-heading a.active{
-	color: rgb(25, 133, 118);
+	color: rgb(255, 255, 255);
 	font-size: 18px;
+}
+.panel-login>.panel-heading .active{
+  background: rgb(25, 133, 118);
 }
 .panel-login>.panel-heading .login {
   padding: 20px 30px;

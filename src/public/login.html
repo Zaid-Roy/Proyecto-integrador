@@ -78,10 +78,10 @@
         
         <div class="panel-heading">
           <div class="row">
-            <div class="col-6 tabs">
-              <a href="#" class="active" id="login-form-link"><div class="login">LOGIN</div></a>
+            <div id="tab-login" class="col-6 tabs active" >
+              <a href="#" id="login-form-link" class="active" ><div class="login">LOGIN</div></a>
             </div>
-            <div class="col-6 tabs">
+            <div id="tab-register" class="col-6 tabs">
               <a href="#" id="register-form-link"><div class="register">REGISTER</div></a>
             </div>
           </div>
@@ -93,10 +93,10 @@
                <form id="login-form" action="#" method="post" role="form" style="display: block; height: 400px;">
                  <h2>LOGIN</h2>
                    <div class="form-group">
-                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                     <input type="text" name="username" id="username-login" tabindex="1" class="form-control" placeholder="Username" value="" required>
                    </div>
                    <div class="form-group">
-                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                     <input type="password" name="password" id="password-login" tabindex="2" class="form-control" placeholder="Password" required>
                    </div>
                    <div class="col-xs-6 form-group pull-left checkbox">
                      <input id="checkbox1" type="checkbox" name="remember">
@@ -111,16 +111,24 @@
                <form id="register-form" action="#" method="post" role="form" style="display: none; height: 400px;">
                  <h2>REGISTER</h2>
                    <div class="form-group">
-                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                     <div class="row">
+                       <div class="col-6">
+                        <input type="text" name="username" id="username-reg" tabindex="1" class="form-control" placeholder="Username" value="" required>
+                       </div>
+                       <div class="col-6">
+                          <input type="phone" id="phone" tabindex="1" name="phone" class="form-control" placeholder="Phone number [10]"pattern="[0-9]{10}" minlength= "10"required>
+                       </div>
+                     </div>
+                     
                    </div>
                    <div class="form-group">
-                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                     <input type="email" name="email" id="email-reg" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
                    </div>
                    <div class="form-group">
-                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                     <input type="password" name="password" id="password-reg" tabindex="2" class="form-control" placeholder="Password" required>
                    </div>
                    <div class="form-group">
-                     <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                     <input type="password" name="confirm-password" id="confirm-password-reg" tabindex="2" class="form-control" placeholder="Confirm Password" required>
                    </div>
                    <div class="form-group">
                      <div class="row">
@@ -138,7 +146,31 @@
      </div>
    </div>
  </div>
-
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modalSuccess" style="color: green;"></p>
+          <p id="modalError" style="color: red;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal 
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>-->
+  
   <!-- ======= Footer ======= -->
   <footer id="footer" class="color-bg">
 
