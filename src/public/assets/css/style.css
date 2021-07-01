@@ -898,6 +898,7 @@ section {
   background-position: center center;
   background-color: rgb(25, 133, 118);
 
+}
 
 .values .card-body {
   z-index: 10;
@@ -1776,6 +1777,7 @@ MOREINFORMACION---------------------------------------------------*/
 
 .contact .php-email-form button[type="submit"]:hover {
   background:rgba(148, 214, 255, 0.568); /*al poner el mouse pone un tono mas claro*/
+}
 .contact button{
   background:rgb(254, 255, 255);
   border:1px solid rgb(25, 133, 118);
