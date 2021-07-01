@@ -1334,7 +1334,9 @@ section {
   position: relative;
   overflow: hidden;
 }
-
+.pricing p{
+  text-align: justify;
+}
 .pricing .featured .bg{
   background-color: rgb(25, 133, 118);
 }
