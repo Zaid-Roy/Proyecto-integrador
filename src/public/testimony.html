@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Flexor Bootstrap Template</title>
+  <title>Testimony | W-Code</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -30,10 +30,12 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/testimony.css" rel="stylesheet">
 </head> 
+
 
 <body>
 
@@ -65,27 +67,6 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <style>
-.btn-agregar{
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 6px 30px 8px 30px;
-  color: #000;
-  border-radius: 50px;
-  transition: all ease-in-out 0.4s;
-}
-
-
-.btn-agregar i {
-  font-size: 14px;
-}
-
-.btn-agregar:hover {
-  color: rgb(25, 133, 118);
-  background-color: rgb(0, 255, 221);
-  background: #fff;
-}
-    </style>
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
@@ -97,6 +78,8 @@
       <div class="container">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
         <div class="col-xl-9 col-lg-12 mt-4">
+
+
           <form action="/add-comment" method="POST">
             <div class="row">
               <div class="col-md-6 form-group">
@@ -110,15 +93,35 @@
             </div>
             <div class="form-group mt-3">
               <label for="testimonio">Testimonials:</label>
-      <textarea class="form-control" id="testimony" name="testimony" rows="4" cols="50"></textarea>
+      <textarea class="form-control" id="testimony" name="testimony" rows="4" cols="50" required></textarea>
       
             </div>
+            <div class="star-rating">
+              <div class="star-input">
+                  <input type="radio" name="rating" id="rating-5" value="5">
+                  <label for="rating-5" class="fas fa-star"></label>
+                  <input type="radio" name="rating" id="rating-4" value="4">
+                  <label for="rating-4" class="fas fa-star"></label>
+                  <input type="radio" name="rating" id="rating-3" value="3" checked>
+                  <label for="rating-3" class="fas fa-star"></label>
+                  <input type="radio" name="rating" id="rating-2" value="2">
+                  <label for="rating-2" class="fas fa-star"></label>
+                  <input type="radio" name="rating" id="rating-1" value="1">
+                  <label for="rating-1" class="fas fa-star"></label>
+  
+                  <!-- Rating Submit Form -->
 
+                      <span class="rating-reaction"></span>
+
+              </div>
+          </div>
+      </body>
             <div class="text-center">
               <button class="btn-agregar">
               Add testimony
           </button>
         </div>
+        <br>
             
           </form>
         </div>

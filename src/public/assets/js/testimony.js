@@ -16,6 +16,17 @@
 var comments=[];
 function addItem(item){
   //Comandos de inicialización del carrusel
+  //Creamos un String para almacenar los íconos
+  var rate="";
+  //Bucle para agregar el Rating 1-5 estrellas rellenas
+  for(let i=0;i<item.rating;i++){
+    rate+="<i class='bx bxs-star'></i>"
+  }
+  //Bucle para agregar las estrellas vacías
+  for(let i=0;i<5-item.rating;i++){
+    rate+="<i class='bx bx-star'></i>"
+  }
+  //Aqui le añadimos al carrusel el testimonio en formato HTML
   $('#testimonio')
       .trigger('add.owl.carousel', [`<div class="testimonial-item" >
       <div>
@@ -25,12 +36,13 @@ function addItem(item){
         
         <p class=""><i class="bx bxs-quote-alt-left quote-icon-left"></i>${item.testimony}<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
         
-        
+        <p>${rate}</p>
       </div>
     </div>`])
+    //Finalmente refrescamos el carrusel
       .trigger('refresh.owl.carousel');
 }
-
+//Función agregar legado, actualmente no se utiliza
 function agregar(){
   //Obtenemos los datos del form
   var nom, com, tes;
@@ -54,12 +66,21 @@ function fetchTestimony() {
   fetch('assets/js/objetos.json')
       .then((response) => response.json()) // transforms data into json
       .then(response => {
-          for (let i = 0; i < response.testimonios.length; i++) {
-            comments.push(response.testimonios[i]);
-            addItem(response.testimonios[i]);
+        //Creamos un array al que le damos la información del Json
+        let array=[];
+        array=response.testimonios;
+        console.log(array);
+        //Hacemos un sort a los ratings del Json
+        array.sort(function(a,b){
+          return a.rating-b.rating;
+        });
+        //Hacemos un bucle de todas las respuestas mientras que no sean más de 10 y se ponen las más nuevas primero
+        for (let i = array.length-1 ,j=0 ; (i >= 0)&&(j<10) ; i--, j++) {
+            //comments.unshift(array.testimonios[i]);
+            addItem(array[i]);
           }
-           const testimonyJson = JSON.stringify(comments);
-          window.localStorage.setItem('testimony', testimonyJson); 
+/*            const testimonyJson = JSON.stringify(comments);
+          window.localStorage.setItem('testimony', testimonyJson);  */
               
       })
 }
@@ -126,6 +147,4 @@ function limpiar(){
 }
 fetchTestimony();
   //loadColorsFromStorage();
-
-
-
+  const starRating = document.querySelector(".star-input");
