@@ -1,6 +1,13 @@
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+// $('#myModal').on('shown.bs.modal', function () {
+//   $('#myInput').trigger('focus')
+// })
+
+var redir="";
+document.getElementById("close1").onclick = function(e){
+  if (redir != ""){
+    location.href='index.html';
+  }
+}
 
 $(function() {
   $('#login-form-link').click(function(e) {
@@ -45,10 +52,14 @@ document.getElementById("login-submit").onclick = function(e){
       error += '<p>Password field is empty</p>';
     }
   }else{
-    if(username == "cege01" && password == "lalo"){
+   
+    if(login(username,password) == true){
       title = "WELCOME BACK "+ username+"!!!";
       error="";
       success = "Successfully logged in, thanks for being our client!";
+      // location.href="index.html";
+      redir = success;
+      
     }else{
       title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
@@ -64,6 +75,7 @@ document.getElementById("login-submit").onclick = function(e){
   $("#modalSuccess").append(success);
   $("#exampleModal").modal();
 }
+
 
 document.getElementById("register-submit").onclick = function(e){
   e.preventDefault();
@@ -106,6 +118,8 @@ document.getElementById("register-submit").onclick = function(e){
       title = "WELCOME!!!";
       error="";
       success = "Your registration was succesfully sent, thanks for being our client!";
+      redir = success;
+    agregar_usuario();
     }
   }
   

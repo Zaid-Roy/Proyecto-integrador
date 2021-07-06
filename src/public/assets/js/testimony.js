@@ -63,6 +63,48 @@ function fetchTestimony() {
               
       })
 }
+let usuario=[];
+function agregar_usuario(){
+
+    //Obtenemos los datos del form
+    var username, phone, email, password;
+    username = document.getElementById("username-reg").value;
+    phone = document.getElementById("phone").value;
+    email = document.getElementById("email-reg").value;
+    password = document.getElementById("password-reg").value;
+  
+    //alert(nom+"\n"+com+"\n"+tes);
+  
+    //Creamos un objeto para guardarlo en el Json
+    var item={
+    'user':username,
+    'phone':phone,
+    'email':email,
+    'pass':password
+    };
+    if (window.localStorage.getItem('usuarios')) {
+      const usuariosOld = localStorage.getItem('usuarios');
+      const newUser = JSON.parse(usuariosOld);
+      for (let i = 0; i < newUser.length; i++)
+      usuario.push(newUser[i]);
+      }
+      usuario.push(item);
+
+    // usuario.push(item);
+    const userJson = JSON.stringify(usuario);
+    window.localStorage.setItem('usuarios', userJson);  
+    //location.href='index.html';
+  }
+
+  function login(username,password){
+    const usuariosOld = localStorage.getItem('usuarios');
+    const newUser = JSON.parse(usuariosOld);
+    for (let i = 0; i < newUser.length; i++){
+      if(username == newUser[i].user && password == newUser[i].pass){
+        return true;
+      }
+    }
+  }
 /* function loadColorsFromStorage() {
   
   if (window.localStorage.getItem('testimony')) {
