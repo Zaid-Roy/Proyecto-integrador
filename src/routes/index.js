@@ -58,11 +58,12 @@ router.post('/add-comment', async (req, res) => {
   
     
     // const datos = { table:[]};
-    const myJSON = {name, company, testimony} = req.body;
+    const myJSON = {name, company, testimony, rating} = req.body;
     let newData ={
         name,
         company,
-        testimony
+        testimony,
+        rating
     }
 
     datos.testimonios.push(newData);
