@@ -77,7 +77,7 @@ router.post('/add-comment', async (req, res) => {
     });
 //    console.log(data);
 //    res.send('received');
-    res.redirect('/testimonios.html');
+    res.redirect('/testimony.html');
 });
 
 
