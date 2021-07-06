@@ -1,0 +1,97 @@
+.btn-agregar {
+  background: rgb(25, 133, 118);
+  display: inline-block;
+  padding: 6px 35px 8px 35px;
+  border-radius: 18px;
+  border: 1px solid rgb(25, 133, 118);
+  color: #fff;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 3px 7px rgba(58, 221, 194, 0.4);
+  transition: 0.3s;
+}
+
+.btn-agregar:hover {
+  background: #fff;
+  color: rgb(25, 133, 118);
+}
+.btn-agregar i {
+  font-size: 14px;
+}
+
+.star-rating form {
+  display: none;
+}
+
+.star-rating input {
+  display: none;
+}
+.star-rating {
+  text-align: center;
+  margin: 50px auto;
+  display: table;
+  width: 350px;
+  font-size: large;
+}
+.star-rating label {
+  padding: 10px;
+  float: right;
+  font-size: 44px;
+  color: #eee;
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+  color: #ffc107;
+}
+.star-rating input:checked ~ label {
+  color: #ffc107;
+}
+.star-rating .rating-reaction:before {
+  width: 100%;
+  float: left;
+  color: #ffc107;
+}
+.star-rating #rating-1:checked ~ .rating-reaction:before {
+  content: "I hate it";
+}
+.star-rating #rating-2:checked ~ .rating-reaction:before {
+  content: "I don't like it";
+}
+.star-rating #rating-3:checked ~ .rating-reaction:before {
+  content: "It is good";
+}
+.star-rating #rating-4:checked ~ .rating-reaction:before {
+  content: "I like it";
+}
+.star-rating #rating-5:checked ~ .rating-reaction:before {
+  content: "I love it";
+}
+.star-rating input:checked ~ form {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding-top: 15px;
+  margin-top: 15px;
+  display: inline-block;
+}
+.star-rating form .rating-reaction {
+  font-size: 24px;
+  float: left;
+  text-transform: capitalize;
+}
+.star-rating form .submit-rating {
+  border: none;
+  outline: none;
+  background: #795548;
+  color: #ffc107;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  float: right;
+}
+form .submit-rating:hover {
+  background-color: #333;
+}
