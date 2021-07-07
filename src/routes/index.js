@@ -41,6 +41,45 @@ console.log('Message sent: %s', info.messageId);
 
     res.redirect('/index.html');
 });
+const fs = require('fs');
+var datos = { testimonios:[]};
+// <-------------------------------------------------
+
+fs.readFile('src/public/assets/js/objetos.json', 'utf8', function readFileCallback(err, data){
+    if (err){
+        console.log(err);
+    } else {
+    datos = JSON.parse(data);
+}});
+
+
+// <-------------------------------------------------
+router.post('/add-comment', async (req, res) => {
+  
+    
+    // const datos = { table:[]};
+    const myJSON = {name, company, testimony, rating} = req.body;
+    let newData ={
+        name,
+        company,
+        testimony,
+        rating
+    }
+
+    datos.testimonios.push(newData);
+    const data = JSON.stringify(datos);
+
+   
+    fs.writeFile('src/public/assets/js/objetos.json', data, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("JSON data is saved.");
+    });
+//    console.log(data);
+//    res.send('received');
+    res.redirect('/testimony.html');
+});
 
 
 module.exports = router;

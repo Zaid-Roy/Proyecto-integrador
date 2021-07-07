@@ -32,13 +32,6 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: Flexor - v2.4.1
-    * Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
   </head>
 
   <body>
@@ -47,6 +40,7 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
+
         <h1 class="text-light">W<a href="index.html" class="typewrite" data-period="3000" data-type='[ "-CODE"]'><span class="wrap"></span></a></h1> <!--agrege un 0 al data-period-->
         
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -55,11 +49,12 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="misionvalores.html">About us</a></li>
+          <li><a href="mission.html">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="contactanos.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Sign up/login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -80,6 +75,7 @@
   </section><!-- End Hero -->
 
   <main id="main">
+
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
@@ -89,6 +85,7 @@
             <div class="content">
               <h3>Why Choose
                 <br>
+
                 <span class="why-us-color-text">W<span href="#" class="typewrite" data-period="3000" data-type='[ "-CODE", "eCreate", "eDesign", "eDevelop" ]'><span class="wrap"></span></span></span>
                 <br>
                 for your company website?</h3>
@@ -97,10 +94,15 @@
                 <br>We are a talented team of web designers and web developers.
                 <br>
                 We can build an amazing web page for your business, personal brand, blog, etc.
-              </br>
-              LEAVE YOUR BUSINESS IMAGE TO US!
+                <br>
+                Still doubt about it? try us, here is our Portfolio.
               </p>
               
+              <div class="text-center">
+                <a href="#portfolio" class="more-btn">Portfolio <i class="bx bx-chevron-right"></i></a>
+              </div>
+              
+
             </div>
           </div>
           <div class="col-xl-8 col-lg-7 d-flex">
@@ -170,7 +172,6 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -203,9 +204,12 @@
               <a href="portfolio-details3.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
 
+    <!-- ======= Team Section ======= -->
 
- <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
 
@@ -333,7 +337,21 @@
       </div>
     </section><!-- End Team Section -->
 
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
 
+        <div id="testimonio" class="owl-carousel testimonials-carousel">
+        </div>
+        <div class="text-center">
+          <br>
+          <a href="testimony.html" class="btn-comment">Leave a Review<i class="bx bx-chevron-right"></i></a>
+        </div>
+      </div>
+      
+      </section>
+
+      
+    <!-- ======= Contact Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">
 
@@ -480,39 +498,43 @@
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
               <h3>
-                <img src="assets/img/clients/Monitoring.png" style="height: 100px;" alt="">
+                <img src="assets/img/clients/renew.png" style="height: 100px;" alt="">
                 <br>
-                Monitoring Content</h3>
+                Website Facelift</h3>
               <h4><sup>$</sup>39<span> / month</span></h4>
               <ul>
-                <li class="na">Responsive design</li>
-                <li>Home page + 3 sections</li>
+                <li>Trends in page design for great web positioning</li>
+                <li>The SSL protocol is a cipher code service</li>
+                <li>Responsive web page</li>
+                <li>Debug</li>
                 <li>Social media links</li>
-                <li>Contact form</li>
-                <li>Blog archive</li>
-                <li class="na">Advice and technical support</li>
+                <!-- <li>Blog archive</li>
+                <li class="na">Advice and technical support</li> -->
               </ul>
-              <div class="btn-wrap">
-                <button class="btn-buy" onclick="location.href='infopaginas/info-monitor.html'">more</button>
+                <div class="btn-wrap"> 
+                <button class="btn-buy" onclick="location.href='infopaginas/info-facelift.html'">more</button>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
+            <div class="box featured">
+              <!--<span class="advanced">Advanced</span>-->
+              <h3>
+                <img src="assets/img/clients/yousite.png" style="height: 100px;" alt="">
+                <br>
+                You imagine  we code it</h3>
               <h4><sup>$</sup>49<span> / month</span></h4>
               <ul>
-                <li class="na">Responsive design</li>
-                <li>Home page + 3 sections</li>
-                <li>Social media links</li>
-                <li>Contact form</li>
+                <li>if you can imagine it we can code it</li>
+                <li>Debug</li>
+                <li>Social media links</li> 
+                <li>if you can imagine it we can code it</li>
                 <li>Blog archive</li>
-                <li class="na">Advice and technical support</li>
+                
               </ul>
               <div class="btn-wrap">
-                <button class="btn-buy" onclick="location.href='infopaginas/info-monitor.html'">more</button>
+                <button class="btn-buy" onclick="location.href='infopaginas/info-your.html'">more</button>
                 
               </div>
             </div>
@@ -521,7 +543,74 @@
         </div>
 
       </div>
-    </section>
+    </section><!-- End Pricing Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">Contact us!</h2>
+          <p data-aos="fade-up">
+            Any question? Need help? <br> Fill the form behind, we will do our very best to answer within one business day.</p>
+        </div>
+
+        <div class="row justify-content-center">
+
+
+          <div class="col-xl-4 col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@example.com<br>contact@example.com</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>589 55488 55<br>589 55488 55</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-xl-8 col-lg-12 mt-4">
+            <form action="/send-email" method="POST" >
+              <div class="row">
+
+                  <div class="form-group col-md-6">
+                      <input type="text" name="name" class="form-control" placeholder="Name" >
+                  </div>
+
+                  <div class="form-group col-md-6  mt-3 mt-md-0">
+                      <input type="text" name="email" placeholder="Email" class="form-control">
+                  </div>
+              </div>
+              
+
+              <div class="form-group mt-3">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" >
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="form-control"></textarea>
+                  <!-- <input type="text" name="message" placeholder="Message" class="form-control"> -->
+
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary btn-block mt-3">
+                Enviar mensaje
+            </button>
+          </div>
+              
+
+          </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
   </main>
 
   <!-- ======= Footer ======= -->
@@ -532,7 +621,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>WeCODE</h3>
+            <h3>W-CODE</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -545,9 +634,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#pricing">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -556,17 +645,17 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="infopaginas/info-StaticWeb.html">Static Web Page</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="infopaginas/info-desktop.html">Personal Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="infopaginas/info-dinamic.html">Dynamic Web Page</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="infopaginas/info-landing.html">Landing Page</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="infopaginas/info-facelift.html">Website Facelift</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Be the first to know about our latest projets and offerts</p>
+            <p>Be the first to know about our latest proyects and discounts</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -623,7 +712,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/additem.js"></script> <!--script para cambio de info de Pricing Section-->
+  <script src="assets/js/testimony.js"></script>
 
 
 </body>

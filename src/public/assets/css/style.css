@@ -366,14 +366,14 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 60vh;
   background-size: cover;
   position: relative;
   z-index: 1;
   padding: 0;
   margin-bottom: -120px;
-  background: url("../img/team.jpg") center center;
+  background: url("../img/hero-bg.jpg") center center;
   background-size: 100%;
   /*background: linear-gradient(to bottom right, rgb(132, 0, 255), rgb(0, 255, 157));*/
 }
@@ -882,6 +882,7 @@ section {
 }
 
 /*--------------------------------------------------------------
+
 --------------------------------------------------------------
 # VISION MISION VALORES!!!!
 --------------------------------------------------------------
@@ -894,12 +895,13 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: rgb(25, 133, 118);
+
 }
 
 .values .card-body {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
-  
   padding: 15px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
@@ -1034,7 +1036,25 @@ section {
 .testimonials .owl-dot.active {
   background-color: rgb(0, 255, 221) !important;
 }
+.testimonials .btn-comment{
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 30px 8px 30px;
+  color: #fff;
+  border-radius: 50px;
+  transition: all ease-in-out 0.4s;
+}
 
+
+.testimonials  .btn-comment i {
+  font-size: 14px;
+}
+
+.testimonials  .btn-comment:hover {
+  color: rgb(25, 133, 118);
+  background-color: rgb(0, 255, 221);
+  background: #fff;
+}
 @media (min-width: 1024px) {
   .testimonials {
     background-attachment: fixed;
@@ -1746,6 +1766,17 @@ MOREINFORMACION---------------------------------------------------*/
   padding: 12px 15px;
 }
 
+.contact .php-email-form button[type="submit"] {
+  background:rgb(111, 172, 252);
+  border: 0;
+  padding: 10px 24px;
+  color:rgba(0, 0, 0, 0.836);
+  transition: 0.4s;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background:rgba(148, 214, 255, 0.568); /*al poner el mouse pone un tono mas claro*/
+}
 .contact button{
   background:rgb(254, 255, 255);
   border:1px solid rgb(25, 133, 118);
