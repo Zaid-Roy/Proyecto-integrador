@@ -27,7 +27,8 @@ let transporter = nodemailer.createTransport({
 });
 let info = await transporter.sendMail({
   from: '"Webcode Server" <ericjesus.aguirre@gmail.com>', // sender address,
-  to: 'ericjam3@gmail.com',
+  //a donde llegan los correos
+  to: 'wcodecompany@gmail.com',
   subject: 'Website Contact Form',
   // text: 'Hello World'
   html: contentHTML

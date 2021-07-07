@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# HOME 
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
@@ -373,8 +373,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   padding: 0;
   margin-bottom: -120px;
-  background: url("../img/hero-bg.jpg") center center;
-  background-size: 100%;
+  background: url("../img/team.jpg")center;
+  background-size:200vh;
   /*background: linear-gradient(to bottom right, rgb(132, 0, 255), rgb(0, 255, 157));*/
 }
 
@@ -1788,6 +1788,7 @@ MOREINFORMACION---------------------------------------------------*/
 .contact button:hover {
   background:rgb(25, 133, 118); /*al poner el mouse pone un tono mas claro*/
 }
+
 
 @-webkit-keyframes animate-loading {
   0% {
