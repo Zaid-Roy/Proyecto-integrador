@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 # HOME 
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
+  width: 200vh;
   height: 60vh;
   background-size: cover;
   position: relative;
@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin-bottom: -120px;
   background: url("../img/team.jpg")center;
-  background-size:220vh;
+  background-size:200vh;
   /*background: linear-gradient(to bottom right, rgb(132, 0, 255), rgb(0, 255, 157));*/
 }
 
