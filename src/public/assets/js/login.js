@@ -53,7 +53,7 @@ document.getElementById("login-submit").onclick = function(e){
     }
   }else{
    
-    if(login(username,password) == true){
+      if($.post('/log-in',{username, password}) == true){
       title = "WELCOME BACK "+ username+"!!!";
       error="";
       success = "Successfully logged in, thanks for being our client!";
@@ -63,8 +63,11 @@ document.getElementById("login-submit").onclick = function(e){
     }else{
       title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
-    }
+    }  
+    
+    
   }
+  
 
   $("#exampleModal").modal();
   $("#exampleModalLabel").empty();
