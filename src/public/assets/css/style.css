@@ -173,8 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: rgb(0, 255, 221);
+  color:rgb(0, 255, 221);
   text-decoration: none;
+  /*navbar complet*/
 }
 
 .nav-menu .drop-down ul {
@@ -210,10 +211,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
   color: lightne(#473d3a, 10);
 }
-
+/*
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #ff5821;
-}
+  color:rgb(255, 94, 0);
+
+}*/
 
 .nav-menu .drop-down > a:after {
   content: "\ea99";
@@ -258,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
+  right: 15px;/* posicion de navbar minimisado*/
   top: 20px;
   z-index: 9998;
   border: 0;
@@ -272,18 +274,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: rgb(0, 255, 221);
+  color:rgb(44, 204, 183);
+  /*color de navbar cuando se hace 3 rallas*/
 }
 
 .mobile-nav {
   position: fixed;
-  top: 55px;
-  right:15px;
-  bottom: 15px;
-  left:50%;
+  top: 55px;/*espacio de arriba*/
+  right:15px;/*pocision hacia la izquierda*/
+  bottom:auto;/*tamaño a lo alto*/
+  left:auto;
   z-index: 9999;
   overflow-y: auto;
-  background: #fff;
+  background: white;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
@@ -297,7 +300,8 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 
-.mobile-nav a {
+.mobile-nav a { 
+  /*color y estilo de texto*/
   display: block;
   position: relative;
   color: #473d3a;
@@ -305,9 +309,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   outline: none;
 }
-
+/*hover de navbar cuando minimisa*/
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #ff5821;
+  color: rgb(38, 196, 175);
   text-decoration: none;
 }
 
@@ -336,7 +340,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 20px;
 }
 
-.mobile-nav-overly {
+/*.mobile-nav-overly {
+  fondo oscuro, lo quite por que tardaba en regresar al original
   width: 100%;
   height: 100%;
   z-index: 9997;
@@ -346,8 +351,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(43, 37, 35, 0.6);
   overflow: hidden;
   display: none;
-  transition: ease-in-out 0.2s;
-}
+  transition: ease-in-out 0.1s;
+}*/
 
 .mobile-nav-active {
   overflow: hidden;
@@ -360,6 +365,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-active .mobile-nav-toggle i {
   color: #fff;
+  /*tachita*/
 }
 
 /*--------------------------------------------------------------
