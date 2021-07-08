@@ -147,7 +147,7 @@ router.post('/log-in', async (req, res) => {
             
               console.log("You have logged in succesfully")
               res.send(true)
-            break;
+              i=rows.length
           }else if(i+1==rows.length){
             console.log("Incorrect password or username")
             res.send(false)

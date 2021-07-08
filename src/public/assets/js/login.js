@@ -52,8 +52,20 @@ document.getElementById("login-submit").onclick = function(e){
       error += '<p>Password field is empty</p>';
     }
   }else{
-   
-      if($.post('/log-in',{username, password}) == true){
+    $.post('/log-in',{username, password})
+    .done(function (data){
+      if(data){
+        title = "WELCOME BACK "+ username+"!!!";
+      error="";
+      success = "Successfully logged in, thanks for being our client!";
+      // location.href="index.html";
+      redir = success;
+      }else{
+        title = "Not valid User Name or Password";
+      error += '<p>Wrong Password or User Name</p>';
+      }
+    }); 
+      /* if(login(username,password)== true){
       title = "WELCOME BACK "+ username+"!!!";
       error="";
       success = "Successfully logged in, thanks for being our client!";
@@ -63,7 +75,7 @@ document.getElementById("login-submit").onclick = function(e){
     }else{
       title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
-    }  
+    }   */
     
     
   }
