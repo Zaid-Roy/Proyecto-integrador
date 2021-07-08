@@ -64,6 +64,16 @@ document.getElementById("login-submit").onclick = function(e){
         title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
       }
+        
+
+  $("#exampleModal").modal();
+  $("#exampleModalLabel").empty();
+  $("#modalSuccess").empty();
+  $("#modalError").empty();
+  $("#exampleModalLabel").append(title);
+  $("#modalError").append(error);
+  $("#modalSuccess").append(success);
+  $("#exampleModal").modal();
     }); 
       /* if(login(username,password)== true){
       title = "WELCOME BACK "+ username+"!!!";
@@ -79,16 +89,7 @@ document.getElementById("login-submit").onclick = function(e){
     
     
   }
-  
 
-  $("#exampleModal").modal();
-  $("#exampleModalLabel").empty();
-  $("#modalSuccess").empty();
-  $("#modalError").empty();
-  $("#exampleModalLabel").append(title);
-  $("#modalError").append(error);
-  $("#modalSuccess").append(success);
-  $("#exampleModal").modal();
 }
 
 

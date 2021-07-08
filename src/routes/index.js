@@ -144,7 +144,6 @@ router.post('/log-in', async (req, res) => {
         for(let i=0;i<rows.length;i++){
         //console.log(rows[i].nombreUsuario,rows[i].contrasena)
           if(rows[i].nombreUsuario==username&&rows[i].contrasena==password){
-            
               console.log("You have logged in succesfully")
               res.send(true)
               i=rows.length
