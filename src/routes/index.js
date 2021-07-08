@@ -82,5 +82,45 @@ router.post('/add-comment', async (req, res) => {
     res.redirect('/testimony.html');
 });
 
+    const mysql = require('mysql');
+
+   
+
+router.post('/add-user', async (req, res) => {
+  
+    
+   
+    const myJSON = {username, phone, email, password} = req.body;
+
+
+    // // ----------------------------------------------------------------------------
+    const connection = mysql.createConnection({
+        host:'localhost',
+        user:'root',
+        password:'admin',
+        database:'wcode'
+      
+      });
+      connection.connect((err)=>{
+        if(err) throw err
+        console.log('la conexion funciona')
+      })
+    
+    //   var username, phone, email, password;
+     
+    //       username = document.getElementById("username-reg").value;
+    //       phone = document.getElementById("phone").value;
+    //       email = document.getElementById("email-reg").value;
+    //       password = document.getElementById("password-reg").value;
+    
+     
+        const insert = `INSERT INTO usuarios (idUsuarios,nombreUsuario,telefono,email,contrasena) VALUES (null,'${username}','${phone}','${email}','${password}')`
+      connection.query(insert, (err, rows) => {
+        if(err) throw err
+      })
+  
+      connection.end()
+});
+
 
 module.exports = router;

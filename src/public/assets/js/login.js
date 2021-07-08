@@ -119,7 +119,7 @@ document.getElementById("register-submit").onclick = function(e){
       error="";
       success = "Your registration was succesfully sent, thanks for being our client!";
       redir = success;
-    agregar_usuario();
+      $.post( '/add-user', { username, phone, email, password} );
     }
   }
   
