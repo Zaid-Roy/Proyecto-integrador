@@ -83,6 +83,7 @@ router.post('/add-comment', async (req, res) => {
 });
 
     const mysql = require('mysql');
+const { callbackPromise } = require('nodemailer/lib/shared');
 
    
 
@@ -99,7 +100,6 @@ router.post('/add-user', async (req, res) => {
         user:'root',
         password:'admin',
         database:'wcode'
-      
       });
       connection.connect((err)=>{
         if(err) throw err
@@ -121,6 +121,40 @@ router.post('/add-user', async (req, res) => {
   
       connection.end()
 });
+router.post('/log-in', async (req, res) => {
 
+    const myUser = {username, password} = req.body;
+    
+    // //----------------------------------------------------------------------------
+    const connection = mysql.createConnection({
+        host:'localhost',
+        user:'root',
+        password:'admin',
+        database:'wcode'
+      
+      });
+      connection.connect((err)=>{
+        if(err) throw err
+        console.log('la conexion funciona')
+      })
+
+      connection.query('SELECT * from usuarios', (err,rows) =>{
+        if(err) throw err
+        //console.log(username,password)
+        for(let i=0;i<rows.length;i++){
+        //console.log(rows[i].nombreUsuario,rows[i].contrasena)
+          if(rows[i].nombreUsuario==username&&rows[i].contrasena==password){
+              console.log("You have logged in succesfully")
+              res.send(true)
+              i=rows.length
+          }else if(i+1==rows.length){
+            console.log("Incorrect password or username")
+            res.send(false)
+          }
+        }
+        })
+        
+      connection.end()
+});
 
 module.exports = router;
