@@ -2,7 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #313030;
-  background-color:rgba(234, 248, 253, 0.425);
+  background-color:rgba(255, 255, 255, 0.425);
 }
 
 a {
@@ -372,26 +372,24 @@ h1, h2, h3, h4, h5, h6 {
 # HOME 
 --------------------------------------------------------------*/
 #hero {
-  width:100%;
-  height:60vh;
+  width:100%;/*ancho*/
+  height:100%;
   background-size: cover;
   position: relative;
-  z-index: 1;
-  padding: 0;
-  margin-bottom: -120px;
-  background: url("../img/team.jpg")center;
-  background-size:100%;
-  /*background: linear-gradient(to bottom right, rgb(132, 0, 255), rgb(0, 255, 157));*/
+  z-index: -1;
+  background: url("../img/team2.jpg")center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
-  top: 0;
+  top:0px;
   left: 0;
   right: 0;
+ 
 }
 
 #hero .container {
