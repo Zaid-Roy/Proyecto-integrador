@@ -373,14 +373,20 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width:100%;/*ancho*/
-  height:100%;
-  background-size: cover;
+  height:60vh;
+  background-size:cover;
   position: relative;
-  z-index: -1;
-  background: url("../img/team2.jpg")center;
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
+.hero {
+  background-image: url(../img/team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    height: 350px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
@@ -468,12 +474,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
 }
-
-@media (max-height: 500px) {
-  #hero {
-    height: 100vh;
+  @media (max-width: 600px) {
+    .hero {
+      background-image: url(../img/teamchiquito.jpg);
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center center;
+      height: 350px;
+      position: relative;
+      margin-bottom: 2rem;
+    }
   }
-}
 
 /*--------------------------------------------------------------
 # Sections General
