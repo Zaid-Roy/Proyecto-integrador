@@ -70,7 +70,7 @@ label {
 .panel-login .checkbox label {
   padding-left: 25px;
   font-weight: 300;
-  display: inline-block;
+ 
   position: relative;
 }
 .panel-login .checkbox {
@@ -199,7 +199,7 @@ label {
   padding: 14px 0;
   text-transform: uppercase;
   border: rgb(25, 133, 118) 1px solid;
-  border-radius: 0px;
+  border-radius: 5px;
   box-shadow: none;
 }
 .btn-register:hover,
