@@ -168,7 +168,7 @@
     autoplay: true,
     dots: true,
     loop: true,
-    items: 1
+    items: 2
   });
 
   // Porfolio isotope and filter
@@ -215,6 +215,49 @@
   });
 
 })(jQuery);
+
+
+if (localStorage.getItem("login")===null){
+  if(sessionStorage.getItem("login")===null){
+    console.log("No user info")
+  }
+}
+if (localStorage.getItem("login")!==null){
+  const log = JSON.parse(localStorage.getItem("login"));
+  username = log.user;
+  password = log.pass;
+  $.post('/log-in', {username, password})
+  .done(function (data){
+    if(data){
+      $('.nav-menu').children().append('<li><a href="loginprueba.html" >Admin</a></li>')
+      $('.nav-menu').children().append('<li><a href="index.html" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
+      $('.nav-menu').children().children()[6].remove()
+      console.log("Success")
+    }
+  });
+}
+if (sessionStorage.getItem("login")!==null){
+  const log = JSON.parse(sessionStorage.getItem("login"));
+  username = log.user;
+  password = log.pass;
+  $.post('/log-in', {username, password})
+  .done(function (data){
+    if(data){
+      $('.nav-menu').children().append('<li><a href="loginprueba.html" >Admin</a></li>')
+      $('.nav-menu').children().append('<li><a href="index.html" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
+      $('.nav-menu').children().children()[6].remove()
+      console.log("Successfully logged");
+    }
+  });
+}
+$('.nav-menu').on('click','.btn-log-out', function (e) {
+
+  window.localStorage.removeItem("login");
+  window.sessionStorage.removeItem("login");
+  console.log("logged out");
+  location.reload();
+
+});
 
 // var log=true;
 // if(log){
