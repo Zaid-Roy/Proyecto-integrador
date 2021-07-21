@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
+h1{
+  color:rgb(100, 200, 200) ;
+  text-align: center;
+  padding-top:30px;
+  padding-bottom:10px;
+}
 
 #login {
   padding-top: 90px;
