@@ -110,7 +110,7 @@ label {
 }
 .panel-login .checkbox input[type="checkbox"]:checked + label::after {
   font-family: 'FontAwesome';
-  content: "\f00c";
+  content: "\f00c"; /*paloma*/
 }
 .panel-login>.panel-heading .tabs{
   padding: 0;
