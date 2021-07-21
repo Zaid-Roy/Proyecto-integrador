@@ -3,6 +3,7 @@
 // })
 
 var redir="";
+var redir2="login.html";
 document.getElementById("close1").onclick = function(e){
   if (redir != ""){
     location.href='index.html';
@@ -39,18 +40,29 @@ document.getElementById("login-submit").onclick = function(e){
   e.preventDefault();
   let username= document.getElementById("username-login").value;
   let password = document.getElementById("password-login").value;
+  let remember = document.getElementById("checkbox1").checked;
+  console.log(remember);
   let title=""
   let error="";
   let success="";
   if(username, password == ""){
     title = "Empty fields";
     success="";
+    
     if(username==""){
       error += '<p>Username field is empty</p>';
     }
     if(password==""){
       error += '<p>Password field is empty</p>';
     }
+    $("#exampleModal").modal();
+  $("#exampleModalLabel").empty();
+  $("#modalSuccess").empty();
+  $("#modalError").empty();
+  $("#exampleModalLabel").append(title);
+  $("#modalError").append(error);
+  $("#modalSuccess").append(success);
+  $("#exampleModal").modal();
   }else{
     $.post('/log-in',{username, password})
     .done(function (data){
@@ -59,10 +71,12 @@ document.getElementById("login-submit").onclick = function(e){
       error="";
       success = "Successfully logged in, thanks for being our client!";
       // location.href="index.html";
+      
       redir = success;
       }else{
         title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
+      redir= success;
       }
         
 
