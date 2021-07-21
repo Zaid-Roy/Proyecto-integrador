@@ -229,7 +229,8 @@ if (localStorage.getItem("login")!==null){
   $.post('/log-in', {username, password})
   .done(function (data){
     if(data){
-      $('.nav-menu').children().append('<li><a href="#" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
+      $('.nav-menu').children().append('<li><a href="loginprueba.html" >Admin</a></li>')
+      $('.nav-menu').children().append('<li><a href="index.html" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
       $('.nav-menu').children().children()[6].remove()
       console.log("Success")
     }
@@ -242,7 +243,8 @@ if (sessionStorage.getItem("login")!==null){
   $.post('/log-in', {username, password})
   .done(function (data){
     if(data){
-      $('.nav-menu').children().append('<li><a href="#" id ="log-out" class="btn btn-log-out btn-lg active" role="button" onclick="" >Sign Out</a></li>')
+      $('.nav-menu').children().append('<li><a href="loginprueba.html" >Admin</a></li>')
+      $('.nav-menu').children().append('<li><a href="index.html" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
       $('.nav-menu').children().children()[6].remove()
       console.log("Successfully logged");
     }
