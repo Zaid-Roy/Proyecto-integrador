@@ -75,7 +75,7 @@ function fetchTestimony() {
           return a.rating-b.rating;
         });
         //Hacemos un bucle de todas las respuestas mientras que no sean más de 10 y se ponen las más nuevas primero
-        for (let i = array.length-1 ,j=0 ; (i >= 0)&&(j<10) ; i--, j++) {
+        for (let i = array.length-1 ,j=0 ; (i >= 0)&&(j<15) ; i--, j++) {
             //comments.unshift(array.testimonios[i]);
             addItem(array[i]);
           }
