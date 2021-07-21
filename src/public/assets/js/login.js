@@ -59,6 +59,8 @@ document.getElementById("login-submit").onclick = function(e){
       error="";
       success = "Successfully logged in, thanks for being our client!";
       // location.href="index.html";
+      //se guarda en session storage
+      //else if (data and radio) se guarda en local storage
       redir = success;
       }else{
         title = "Not valid User Name or Password";

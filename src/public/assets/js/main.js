@@ -215,3 +215,14 @@
   });
 
 })(jQuery);
+
+// var log=true;
+// if(log){
+//   $('.nav-menu').children().append('<li><a href="#" class="btn btn-log-out btn-lg active" role="button" >Sign Out</a></li>')
+//   $('.nav-menu').children().children()[6].remove()
+  
+// }
+// $('btn-log-out').on('click', function(e){
+    
+// })
+
