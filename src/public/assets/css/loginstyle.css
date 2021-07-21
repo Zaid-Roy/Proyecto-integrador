@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
+
 #login {
   padding-top: 90px;
   padding-bottom: 90px;;
   font-weight:100;
 }
-
 .panel {
   border-radius: 5px;
 }
@@ -18,7 +18,6 @@ label {
   -moz-box-shadow: 0px 0px 49px 14px rgba(45, 72, 126, 0.39);
   box-shadow: 0px 0px 49px 14px rgba(44, 57, 83, 0.39);
 }
-/* try outs*/
 .panel-login .form-group {
   padding: 0 30px;
 }
@@ -59,41 +58,6 @@ label {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* end of try outs */
-/* .panel-login>.panel-heading {
-  text-align:center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 0px;
-  padding: 0px 15px;
-}
-.panel-login .form-group {
-  padding: 0 30px;
-}
-
-.panel-login>.panel-heading .register {
-  padding: 20px 30px;
-  
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.panel-login>.panel-heading a{
-  text-decoration: none;
-  color: rgb(7, 1, 1);
-  font-weight: 300;
-  font-size: 16px;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-.panel-login>.panel-heading a.active{
-	background-color: #0a3f3b;
-  color: #0a3f3b;
-	font-size: 18px;
-} */
 .panel-login .checkbox input[type=checkbox]{
   margin-left: 0px;
 }
@@ -104,10 +68,11 @@ label {
   position: relative;
 }
 .panel-login .checkbox {
- padding-left: 20px;
+ padding-left: 20px;/*alineacion de input*/
 }
 .panel-login .checkbox label::before {
   content: "";
+  margin-top: 5px;
   display: inline-block;
   position: absolute;
   width: 17px;
@@ -116,7 +81,7 @@ label {
   margin-left: 0px;
   border: 1px solid #cccccc;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: #fff;/*caja de palomita*/
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -128,11 +93,12 @@ label {
   height: 16px;
   left: 0;
   top: 0;
+  margin-top: 5px;
   margin-left: 0px;
   padding-left: 3px;
   padding-top: 1px;
   font-size: 11px;
-  color: #555555;
+  color: #555555;/*color palomita*/
 }
 .panel-login .checkbox input[type="checkbox"] {
   opacity: 0;
