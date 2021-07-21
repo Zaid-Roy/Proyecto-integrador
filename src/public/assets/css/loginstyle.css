@@ -72,7 +72,7 @@ label {
 }
 .panel-login .checkbox label::before {
   content: "";
-  margin-top: 5px;
+  margin-top: 4px;
   display: inline-block;
   position: absolute;
   width: 17px;
@@ -93,12 +93,12 @@ label {
   height: 16px;
   left: 0;
   top: 0;
-  margin-top: 5px;
+  margin-top: 4px;
   margin-left: 0px;
   padding-left: 3px;
   padding-top: 1px;
   font-size: 11px;
-  color: #555555;/*color palomita*/
+  color: rgb(25, 133, 118);/*color palomita*/
 }
 .panel-login .checkbox input[type="checkbox"] {
   opacity: 0;
