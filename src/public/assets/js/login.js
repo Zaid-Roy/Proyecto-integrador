@@ -66,15 +66,35 @@ document.getElementById("login-submit").onclick = function(e){
   }else{
     $.post('/log-in',{username, password})
     .done(function (data){
-      if(data){
+      if(data && !remember){
         title = "WELCOME BACK "+ username+"!!!";
       error="";
       success = "Successfully logged in, thanks for being our client!";
+      var item={
+        'user':username,
+        'pass':password
+      }; 
+        const credentials = JSON.stringify(item);
+      window.sessionStorage.setItem('login', credentials);
       // location.href="index.html";
       //se guarda en session storage
       //else if (data and radio) se guarda en local storage
       redir = success;
-      }else{
+      }
+      else if(data && remember){
+        title = "WELCOME BACK "+ username+"!!!";
+        error="";
+        success = "Successfully logged in, thanks for being our client!";
+          
+        var item={
+        'user':username,
+        'pass':password
+      }; 
+        const credentials = JSON.stringify(item);
+      window.localStorage.setItem('login', credentials);
+
+      }
+      else{
         title = "Not valid User Name or Password";
       error += '<p>Wrong Password or User Name</p>';
       redir= success;
