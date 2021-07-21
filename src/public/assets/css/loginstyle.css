@@ -193,10 +193,10 @@ label {
   background-color: #fff;
   outline: none;
   color: rgb(25, 133, 118);
-  font-size: 14px;
+  font-size: 20px;
   height: auto;
   font-weight: normal;
-  padding: 14px 0;
+  padding: 8px 0;
   text-transform: uppercase;
   border: rgb(25, 133, 118) 1px solid;
   border-radius: 5px;
