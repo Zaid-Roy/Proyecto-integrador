@@ -76,23 +76,24 @@
            <div class="row justify-content-center">
 
             <div class="input-group col-11">
-              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
+              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
               <button type="button" class="btn btn-outline-primary">search</button>
             </div>
 
            
             <div class="col-lg-12"> 
                <form id="register-form" action="#" method="post" role="form" style="display: block; height: 400px;">
-                 <h2>User</h2>
-
+                <div class="col-lg-8 col-md-12">
+                  <input type="id" class="id col-3" placeholder="Id">
+                </div>
+                
                    <div class="form-group"> 
                      <div class="row">
                        <div class="col-6">
                         <input type="text" name="username" id="username-reg" tabindex="1" class="form-control" placeholder="Username" value="" required>
                        </div>
                        <div class="col-6">
-                          <input type="phone" id="phone" tabindex="1" name="phone" class="form-control" placeholder="Phone number [10]" pattern="[0-9]{10}" minlength= "10"required>
+                          <input type="text" id="phone" tabindex="1" name="phone" class="form-control" placeholder="Phone number [10]" pattern="[0-9]{10}" minlength= "10"required>
                        </div>
                      </div> 
                    </div>
@@ -116,11 +117,11 @@
                      <div class="form-group">
                      <div class="row">
                        <div class="col-6 ">
-                         <input type="submit" name="" id="" tabindex="4" class="form-control btn-outline-success btn-lg"  value="Update">
+                         <input type="submit" name="update-submit" id="update-submit" tabindex="4" class="form-control btn-outline-success btn-lg"  value="Update">
                         </div>
 
                          <div class="col-6 ">
-                         <input type="submit" name="" id="" tabindex="4" class="form-control btn-outline-danger btn-lg"  value="Delete">
+                         <input type="submit" name="delete-submit" id="delete-submit" tabindex="4" class="form-control btn-outline-danger btn-lg"  value="Delete">
                         </div>
 
                       </div>

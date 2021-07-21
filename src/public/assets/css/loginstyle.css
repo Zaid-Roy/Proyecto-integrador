@@ -1,10 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
 h1{
-  color:rgb(100, 200, 200) ;
+  color:rgb(25, 133, 118) ;
   text-align: center;
   padding-top:30px;
   padding-bottom:10px;
+}
+.id{
+  margin-top:20px;
+  margin-left: 15px;
+  margin-bottom:20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-size: 20px;
+  color:#cccccc8a ;
+  
 }
 
 #login {
