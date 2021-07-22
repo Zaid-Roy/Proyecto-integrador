@@ -44,11 +44,82 @@ $('#btn-search').on('click',function(e){
 
 });
 $('#register-submit').on('click',function(e){
-  console.log("Register")
+  e.preventDefault();
+
+  var user =$('#username-reg').val();
+  var phone =$('#phone').val();
+  var email =$('#email-reg').val();
+  var pass =$('#password-reg').val();
+  url = "http://localhost:8080/data/register"
+  fetch(url, {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      'name': user,
+      'phone':phone,
+      'email':email,
+      'pass':pass
+  })
+  })
+      .then(response =>{
+        response.text()
+        .then(function (text) {
+          console.log(text)
+        }
+      )
+    })
+    .catch(err=>console.log(err))
+  
 });
 $('#update-submit').on('click',function(e){
-  console.log("Register")
+  e.preventDefault();
+  var id = $('#ID').val();
+  var user =$('#username-reg').val();
+  var phone =$('#phone').val();
+  var email =$('#email-reg').val();
+  var pass =$('#password-reg').val();
+  data ={
+    "nombreUsuario": user,
+    "telefono": phone,
+    "email": email,
+    "contrasena": pass
+}
+  url = "http://localhost:8080/data/update/"+id;
+  fetch(url, {
+    method: 'PUT', // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response =>{
+      response.text()
+      .then(function (text) {
+        console.log(text)
+      }
+    )
+  })
+.catch(err=>console.log(err))
 });
+      
+
 $('#delete-submit').on('click',function(e){
-  console.log("Register")
+  e.preventDefault();
+  url = "http://localhost:8080/data/delete/"
+  var id = $('#ID').val();
+  url += id;
+  fetch(url, {
+    method: 'DELETE', // or 'PUT'
+    
+  })
+      .then(response =>{
+        response.text()
+        .then(function (text) {
+          console.log(text)
+        }
+      )
+    })
+    .catch(err=>console.log(err))
 });
