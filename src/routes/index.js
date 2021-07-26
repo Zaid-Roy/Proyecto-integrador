@@ -10,7 +10,7 @@ router.post('/send-email', async (req, res) => {
     <ul>
         <li>Username: ${name}</li>
         <li>User Email: ${email}</li>
-        <li>Asunto: ${subject}</li>
+        <li>Subject: ${subject}</li>
     </ul>
     <p>${message}</p>
 `;
@@ -26,7 +26,7 @@ let transporter = nodemailer.createTransport({
   }
 });
 let info = await transporter.sendMail({
-  from: '"Webcode Server" <ericjesus.aguirre@gmail.com>', // sender address,
+  from: '"W-code Server" <ericjesus.aguirre@gmail.com>', // sender address,
   //a donde llegan los correos
   to: 'wcodecompany@gmail.com',
   subject: 'Website Contact Form',
